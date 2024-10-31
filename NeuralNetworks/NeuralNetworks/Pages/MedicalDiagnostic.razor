@@ -1,0 +1,339 @@
+﻿@page "/medicaldiagnostic"
+
+@inject HttpClient Http
+@using MultiLevelNeurons
+
+
+<h3>Select Symptoms</h3>
+
+<!-- Symptom Checkboxes -->
+<div class="container">
+    @for (int i = 0; i < symptomOptions.Count; i += 4)
+    {
+        <div class="row">
+            @for (int j = 0; j < 4 && i + j < symptomOptions.Count; j++)
+            {
+                var currentIndex = i + j;
+
+                <div class="col-md-3 mb-3">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" @onchange="(e) => OnCheckboxChanged(e, symptomOptions[currentIndex], true)" />
+                        <label class="form-check-label">@symptomOptions[currentIndex]</label>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<h3>Select Diagnosis</h3>
+
+<!-- Diagnosis Checkboxes -->
+<div class="container">
+    <div class="row">
+        @foreach (var diagnosis in diagnosisOptions)
+        {
+            <div class="col-md-3 mb-3">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" @onchange="(e) => OnCheckboxChanged(e, diagnosis, false)" />
+                    <label class="form-check-label">@diagnosis</label>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Button to Create Table -->
+<button class="btn btn-primary mt-3" @onclick="CreateTable" disabled="@(selectedSymptoms.Count == 0 || selectedDiagnoses.Count == 0)">Створити мережу</button>
+
+<!-- Dynamic Table -->
+@if (isTableVisible)
+{
+    <h3 class="mt-4">Generated Table</h3>
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="thead-light">
+            <tr>
+                @foreach (var symptom in selectedSymptoms)
+                {
+                    <th>@symptom</th>
+                }
+                @foreach (var diagnosis in selectedDiagnoses)
+                {
+                    <th>@diagnosis</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @foreach (var symptom in selectedSymptoms)
+                {
+                    <td>
+                        <select class="form-select" @onchange="(e) => OnDropdownChanged(e, symptom, true, true)">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </td>
+                }
+                @foreach (var diagnosis in selectedDiagnoses)
+                {
+                    <td>
+                        <select class="form-select" @onchange="(e) => OnDropdownChanged(e, diagnosis, false, true)">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </td>
+                }
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-success mt-3" @onclick="AddToDataset">Add to dataset</button>
+    <button class="btn btn-success mt-3" @onclick="Learn">Learn</button>
+}
+
+@if (isTableVisible)
+{
+    <h3 class="mt-4">Generated Table</h3>
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="thead-light">
+            <tr>
+                @foreach (var symptom in selectedSymptoms)
+                {
+                    <th>@symptom</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @foreach (var symptom in selectedSymptoms)
+                {
+                    <td>
+                        <select class="form-select" @onchange="(e) => OnDropdownChanged(e, symptom, true, false)">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </td>
+                }
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-success mt-3" @onclick="Verify">Verify</button>
+}
+
+@if (VerifyOutput != null)
+{
+    @for (int i = 0; i < VerifyOutput.Length; i++)
+        {
+            <h4>
+                @string.Concat(new string[] {VerifyOutput[i].ToString(), " - ", selectedDiagnoses[i]});
+            </h4>
+            <br />
+        }
+}
+
+@*if (xValues.Length > 0 && dValues.Length > 0)
+{
+    <h4 class="mt-4">X Array (Symptoms)</h4>
+    <p>@string.Join(", ", xValues)</p>
+
+    <h4 class="mt-4">D Array (Diagnoses)</h4>
+    <p>@string.Join(", ", dValues)</p>
+}*@
+
+@code {
+    // Symptom options (Checkbox labels)
+    private List<string> symptomOptions = new List<string>
+    {
+        "Насморок", "Кашель", "Хрип", "Пчихання", "Тошнота", "Сухість в горлі",
+        "Біль в грудях", "Температура", "Біль в горлі", "Головні болі",
+        "Відсутність апетиту", "Пневмонія"
+    };
+
+    // Diagnosis options
+    private List<string> diagnosisOptions = new List<string>
+    {
+        "ОРЗ", "Здоровий", "Порушення сну"
+    };
+
+    // Selected symptoms and diagnoses (Checked checkboxes)
+    private List<string> selectedSymptoms = new List<string>();
+    private List<string> selectedDiagnoses = new List<string>();
+
+    private bool isTableVisible = false; // Controls table visibility
+
+    // To store dropdown values for symptoms and diagnoses
+    private Dictionary<string, string> selectedValues1 = new Dictionary<string, string>();
+    private Dictionary<string, string> selectedValues2 = new Dictionary<string, string>();
+
+    // Arrays for X and D values
+    private double[] xValues = new double[0];
+    private double[] dValues = new double[0];
+
+    // Handle checkbox changes
+    private void OnCheckboxChanged(ChangeEventArgs e, string option, bool isSymptom)
+    {
+        var isChecked = (bool)e.Value;
+
+        if (isSymptom)
+        {
+            if (isChecked)
+            {
+                selectedSymptoms.Add(option);
+            }
+            else
+            {
+                selectedSymptoms.Remove(option);
+            }
+        }
+        else
+        {
+            if (isChecked)
+            {
+                selectedDiagnoses.Add(option);
+            }
+            else
+            {
+                selectedDiagnoses.Remove(option);
+            }
+        }
+    }
+
+    // Handle dropdown value changes in the table
+    private void OnDropdownChanged(ChangeEventArgs e, string option, bool isSymptom, bool isFirstTable)
+    {
+        var selectedValue = e.Value.ToString();
+
+        // Update the value for the current symptom or diagnosis
+        if (isFirstTable)
+            selectedValues1[option] = selectedValue;
+        else
+            selectedValues2[option] = selectedValue;
+    }
+
+    // Generate the table when the button is clicked
+    private async void CreateTable()
+    {
+        if (selectedSymptoms.Count > 0 && selectedDiagnoses.Count > 0) // Ensure at least 1 diagnosis is selected
+        {
+            isTableVisible = true;
+
+            // Initialize the table with default values (0) if needed
+            foreach (var symptom in selectedSymptoms)
+            {
+                if (!selectedValues1.ContainsKey(symptom))
+                {
+                    selectedValues1[symptom] = "0";
+                }
+            }
+            foreach (var diagnosis in selectedDiagnoses)
+            {
+                if (!selectedValues1.ContainsKey(diagnosis))
+                {
+                    selectedValues1[diagnosis] = "0";
+                }
+            }
+
+            // for second table
+            foreach (var symptom in selectedSymptoms)
+            {
+                if (!selectedValues2.ContainsKey(symptom))
+                {
+                    selectedValues2[symptom] = "0";
+                }
+            }
+            foreach (var diagnosis in selectedDiagnoses)
+            {
+                if (!selectedValues2.ContainsKey(diagnosis))
+                {
+                    selectedValues2[diagnosis] = "0";
+                }
+            }
+
+            await Http.PostAsJsonAsync<CreateModel>("medicalDiagnostic/create", new CreateModel(selectedDiagnoses.Count, 10, selectedSymptoms.Count));
+        }
+    }
+
+    // Get X and D arrays when the button is clicked
+    private async void AddToDataset()
+    {
+        // X Array will be for selected symptoms
+        xValues = new double[selectedSymptoms.Count];
+
+        // D Array will be for selected diagnoses
+        dValues = new double[selectedDiagnoses.Count];
+
+        // Fill X array (symptoms)
+        for (int i = 0; i < selectedSymptoms.Count; i++)
+        {
+            xValues[i] = double.Parse(selectedValues1[selectedSymptoms[i]]);
+        }
+
+        // Fill D array (diagnoses)
+        for (int i = 0; i < selectedDiagnoses.Count; i++)
+        {
+            dValues[i] = double.Parse(selectedValues1[selectedDiagnoses[i]]);
+        }
+
+
+        //dataset.Add(new Letter(imageDataArray));
+        await Http.PostAsJsonAsync<MedicalCase>("medicalDiagnostic", new MedicalCase(xValues, dValues));
+
+        //StateHasChanged(); // Refresh the view to show the arrays
+    }
+
+
+    private async void Verify()
+    {
+        // X Array will be for selected symptoms
+        xValues = new double[selectedSymptoms.Count];
+
+        // Fill X array (symptoms)
+        for (int i = 0; i < selectedSymptoms.Count; i++)
+        {
+            xValues[i] = double.Parse(selectedValues2[selectedSymptoms[i]]);
+        }
+
+        //dataset.Add(new Letter(imageDataArray));
+        var resultMessage = await Http.PostAsJsonAsync<MedicalCase>("medicaldiagnostic/verify", new MedicalCase(xValues, new double[0]));
+
+        VerifyOutput = await resultMessage.Content.ReadFromJsonAsync <double[]>();
+
+        double numb = VerifyOutput[0];
+        var index = 0;
+        for(int i = 1; i < VerifyOutput.Length; i++)
+        {
+            if (numb < VerifyOutput[i])
+            {
+                numb = VerifyOutput[i];
+                index = i;
+            }
+        }
+        //Result = string.Concat(new string[]{VerifyOutput[index].ToString(), " - ", ((char)('A' + index)).ToString(), "\n"});
+    }
+
+
+    private double[] VerifyOutput = null;
+
+    private string learning;
+
+    private string Result;
+
+    private async Task Learn()
+    {
+        //var imageDataArray = await JS.InvokeAsync<double[]>("drawing.getBinaryImageDataArray", canvasRef);
+
+        //network.learn(dataset);
+
+        learning = "The network is learning...";
+        int numbOfIter = await Http.GetFromJsonAsync<int>("medicalDiagnostic/learn");
+        learning = "The network has learned.;";
+    }
+
+}

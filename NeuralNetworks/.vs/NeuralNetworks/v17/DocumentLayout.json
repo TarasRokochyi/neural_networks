@@ -1,0 +1,484 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneuronsapi\\controllers\\networkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|solutionrelative:multilevelneuronsapi\\controllers\\networkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneurons\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|solutionrelative:multilevelneurons\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneuronsapi\\controllers\\medicaldiagnosticcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|solutionrelative:multilevelneuronsapi\\controllers\\medicaldiagnosticcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneuronsapi\\services\\medicaldatasetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|solutionrelative:multilevelneuronsapi\\services\\medicaldatasetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneuronsapi\\services\\imedicaldatasetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|solutionrelative:multilevelneuronsapi\\services\\imedicaldatasetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneurons\\createmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|solutionrelative:multilevelneurons\\createmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\neuralnetworks\\pages\\medicaldiagnostic.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|solutionrelative:neuralnetworks\\pages\\medicaldiagnostic.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneurons\\networkhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|solutionrelative:multilevelneurons\\networkhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneurons\\medicalcase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|solutionrelative:multilevelneurons\\medicalcase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3E98AD1-77BB-4755-8927-2AF3D590AC14}|NetworkConsoleTest\\NetworkConsoleTest.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\networkconsoletest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3E98AD1-77BB-4755-8927-2AF3D590AC14}|NetworkConsoleTest\\NetworkConsoleTest.csproj|solutionrelative:networkconsoletest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneuronsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|solutionrelative:multilevelneuronsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\neuralnetworks\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|solutionrelative:neuralnetworks\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneurons\\letter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|solutionrelative:multilevelneurons\\letter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\neuralnetworks\\pages\\drawingpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|solutionrelative:neuralnetworks\\pages\\drawingpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneurons\\letters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|solutionrelative:multilevelneurons\\letters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneurons\\idata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|solutionrelative:multilevelneurons\\idata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneurons\\neuron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B4983D1-A3FA-403B-8F1B-69DBCC342589}|MultiLevelNeurons\\MultiLevelNeurons.csproj|solutionrelative:multilevelneurons\\neuron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\neuralnetworks\\neuralnetworks.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|solutionrelative:neuralnetworks\\neuralnetworks.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\neuralnetworks\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|solutionrelative:neuralnetworks\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\neuralnetworks\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|solutionrelative:neuralnetworks\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\neuralnetworks\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|solutionrelative:neuralnetworks\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\neuralnetworks\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|solutionrelative:neuralnetworks\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\neuralnetworks\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|solutionrelative:neuralnetworks\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneuronsapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|solutionrelative:multilevelneuronsapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\neuralnetworks\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|solutionrelative:neuralnetworks\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\neuralnetworks\\wwwroot\\js\\drawing.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{09ADC585-8AA6-40AF-8127-129B7C3C50B1}|NeuralNetworks\\NeuralNetworks.csproj|solutionrelative:neuralnetworks\\wwwroot\\js\\drawing.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|c:\\users\\tarro\\source\\repos\\neuralnetworks\\multilevelneuronsapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAAFDECB-60A7-4E7A-A28D-B599E7353734}|MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj|solutionrelative:multilevelneuronsapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MedicalDatasetService.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Services\\MedicalDatasetService.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeuronsApi\\Services\\MedicalDatasetService.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Services\\MedicalDatasetService.cs",
+              "RelativeToolTip": "MultiLevelNeuronsApi\\Services\\MedicalDatasetService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T01:22:22.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMedicalDatasetService.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Services\\IMedicalDatasetService.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeuronsApi\\Services\\IMedicalDatasetService.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Services\\IMedicalDatasetService.cs",
+              "RelativeToolTip": "MultiLevelNeuronsApi\\Services\\IMedicalDatasetService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T01:21:39.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Network.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\Network.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeurons\\Network.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\Network.cs",
+              "RelativeToolTip": "MultiLevelNeurons\\Network.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T13:23:14.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MedicalDiagnosticController.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Controllers\\MedicalDiagnosticController.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeuronsApi\\Controllers\\MedicalDiagnosticController.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Controllers\\MedicalDiagnosticController.cs",
+              "RelativeToolTip": "MultiLevelNeuronsApi\\Controllers\\MedicalDiagnosticController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T13:47:24.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NetworkController.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Controllers\\NetworkController.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeuronsApi\\Controllers\\NetworkController.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Controllers\\NetworkController.cs",
+              "RelativeToolTip": "MultiLevelNeuronsApi\\Controllers\\NetworkController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T23:02:04.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateModel.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\CreateModel.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeurons\\CreateModel.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\CreateModel.cs",
+              "RelativeToolTip": "MultiLevelNeurons\\CreateModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T10:20:38.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MedicalDiagnostic.razor",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\Pages\\MedicalDiagnostic.razor",
+              "RelativeDocumentMoniker": "NeuralNetworks\\Pages\\MedicalDiagnostic.razor",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\Pages\\MedicalDiagnostic.razor",
+              "RelativeToolTip": "NeuralNetworks\\Pages\\MedicalDiagnostic.razor",
+              "ViewState": "AgIAAB0BAAAAAAAAAAAowDMBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T14:04:42.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MedicalCase.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\MedicalCase.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeurons\\MedicalCase.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\MedicalCase.cs",
+              "RelativeToolTip": "MultiLevelNeurons\\MedicalCase.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA7wBIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T13:44:30.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NetworkHelper.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\NetworkHelper.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeurons\\NetworkHelper.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\NetworkHelper.cs",
+              "RelativeToolTip": "MultiLevelNeurons\\NetworkHelper.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAkwBYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T22:39:31.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Program.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeuronsApi\\Program.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Program.cs",
+              "RelativeToolTip": "MultiLevelNeuronsApi\\Program.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAwwDQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T23:16:40.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NetworkConsoleTest\\Program.cs",
+              "RelativeDocumentMoniker": "NetworkConsoleTest\\Program.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NetworkConsoleTest\\Program.cs",
+              "RelativeToolTip": "NetworkConsoleTest\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T20:13:16.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Letters.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\Letters.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeurons\\Letters.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\Letters.cs",
+              "RelativeToolTip": "MultiLevelNeurons\\Letters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T08:54:37.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IData.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\IData.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeurons\\IData.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\IData.cs",
+              "RelativeToolTip": "MultiLevelNeurons\\IData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:11:20.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DrawingPage.razor",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\Pages\\DrawingPage.razor",
+              "RelativeDocumentMoniker": "NeuralNetworks\\Pages\\DrawingPage.razor",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\Pages\\DrawingPage.razor",
+              "RelativeToolTip": "NeuralNetworks\\Pages\\DrawingPage.razor",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAB4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-06T12:10:35.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\Program.cs",
+              "RelativeDocumentMoniker": "NeuralNetworks\\Program.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\Program.cs",
+              "RelativeToolTip": "NeuralNetworks\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T08:44:55.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Letter.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\Letter.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeurons\\Letter.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\Letter.cs",
+              "RelativeToolTip": "MultiLevelNeurons\\Letter.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T12:38:34.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Neuron.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\Neuron.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeurons\\Neuron.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\Neuron.cs",
+              "RelativeToolTip": "MultiLevelNeurons\\Neuron.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T12:25:54.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\_Imports.razor",
+              "RelativeDocumentMoniker": "NeuralNetworks\\_Imports.razor",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\_Imports.razor",
+              "RelativeToolTip": "NeuralNetworks\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T14:48:15.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "NeuralNetworks.csproj",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\NeuralNetworks.csproj",
+              "RelativeDocumentMoniker": "NeuralNetworks\\NeuralNetworks.csproj",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\NeuralNetworks.csproj",
+              "RelativeToolTip": "NeuralNetworks\\NeuralNetworks.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-20T14:58:18.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "NeuralNetworks\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\Pages\\Home.razor",
+              "RelativeToolTip": "NeuralNetworks\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T14:48:22.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\App.razor",
+              "RelativeDocumentMoniker": "NeuralNetworks\\App.razor",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\App.razor",
+              "RelativeToolTip": "NeuralNetworks\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T14:48:17.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "NeuralNetworks\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "NeuralNetworks\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-06T12:06:02.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "NeuralNetworks\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\wwwroot\\index.html",
+              "RelativeToolTip": "NeuralNetworks\\wwwroot\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-10-06T12:15:03.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "NeuralNetworks\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "NeuralNetworks\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T14:04:50.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "MultiLevelNeuronsApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "MultiLevelNeuronsApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwA8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-08T08:46:38.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "MultiLevelNeuronsApi\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "MultiLevelNeuronsApi\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T23:01:26.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "drawing.js",
+              "DocumentMoniker": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\wwwroot\\js\\drawing.js",
+              "RelativeDocumentMoniker": "NeuralNetworks\\wwwroot\\js\\drawing.js",
+              "ToolTip": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\wwwroot\\js\\drawing.js",
+              "RelativeToolTip": "NeuralNetworks\\wwwroot\\js\\drawing.js",
+              "ViewState": "AgIAACIAAAAAAAAAAAAUwDMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-06T20:27:07.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAJgTAAAAAAAAAAAAwKkTAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-10-08T10:10:41.825Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

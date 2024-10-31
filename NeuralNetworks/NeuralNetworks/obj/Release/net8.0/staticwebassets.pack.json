@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\bin\\Release\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\obj\\Release\\net8.0\\compressed\\linc9wivji.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\obj\\Release\\net8.0\\scopedcss\\bundle\\NeuralNetworks.styles.css",
+      "PackagePath": "staticwebassets\\NeuralNetworks.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\wwwroot\\js\\drawing.js",
+      "PackagePath": "staticwebassets\\js\\drawing.js"
+    },
+    {
+      "Id": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.NeuralNetworks.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.NeuralNetworks.props",
+      "PackagePath": "build\\NeuralNetworks.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.NeuralNetworks.props",
+      "PackagePath": "buildMultiTargeting\\NeuralNetworks.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.NeuralNetworks.props",
+      "PackagePath": "buildTransitive\\NeuralNetworks.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeuralNetworks", "NeuralNetworks\NeuralNetworks.csproj", "{09ADC585-8AA6-40AF-8127-129B7C3C50B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiLevelNeurons", "MultiLevelNeurons\MultiLevelNeurons.csproj", "{5B4983D1-A3FA-403B-8F1B-69DBCC342589}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkConsoleTest", "NetworkConsoleTest\NetworkConsoleTest.csproj", "{D3E98AD1-77BB-4755-8927-2AF3D590AC14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiLevelNeuronsApi", "MultiLevelNeuronsApi\MultiLevelNeuronsApi.csproj", "{DAAFDECB-60A7-4E7A-A28D-B599E7353734}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09ADC585-8AA6-40AF-8127-129B7C3C50B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09ADC585-8AA6-40AF-8127-129B7C3C50B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09ADC585-8AA6-40AF-8127-129B7C3C50B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09ADC585-8AA6-40AF-8127-129B7C3C50B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B4983D1-A3FA-403B-8F1B-69DBCC342589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B4983D1-A3FA-403B-8F1B-69DBCC342589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B4983D1-A3FA-403B-8F1B-69DBCC342589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B4983D1-A3FA-403B-8F1B-69DBCC342589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3E98AD1-77BB-4755-8927-2AF3D590AC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3E98AD1-77BB-4755-8927-2AF3D590AC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3E98AD1-77BB-4755-8927-2AF3D590AC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3E98AD1-77BB-4755-8927-2AF3D590AC14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAAFDECB-60A7-4E7A-A28D-B599E7353734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAAFDECB-60A7-4E7A-A28D-B599E7353734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAAFDECB-60A7-4E7A-A28D-B599E7353734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAAFDECB-60A7-4E7A-A28D-B599E7353734}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B863622-D164-4AD8-81CC-6EB38FFDD6DE}
+	EndGlobalSection
+EndGlobal

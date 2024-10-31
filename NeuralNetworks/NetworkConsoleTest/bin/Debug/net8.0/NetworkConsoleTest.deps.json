@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "NetworkConsoleTest/1.0.0": {
+        "dependencies": {
+          "MultiLevelNeurons": "1.0.0"
+        },
+        "runtime": {
+          "NetworkConsoleTest.dll": {}
+        }
+      },
+      "MultiLevelNeurons/1.0.0": {
+        "runtime": {
+          "MultiLevelNeurons.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NetworkConsoleTest/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MultiLevelNeurons/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,148 @@
+﻿@page "/drawing"
+@inject IJSRuntime JS
+@inject HttpClient Http
+@using MultiLevelNeurons
+
+<canvas @ref="canvasRef" width="40" height="40"
+        @onmousedown="StartDrawing"
+        @onmouseup="StopDrawing"
+        @onmousemove="Draw"
+        style="border:1px solid black; width: 150px; height: 150px;"></canvas>
+
+<br>
+<input id="letterInput" type="text" @bind="inputLetter" placeholder="Write the letter you drew" /> 
+
+<button @onclick="ClearCanvas">Clear</button>
+<button @onclick="Resize">Resize</button>
+<button @onclick="Learn">Learn</button>
+<button @onclick="AddToDataset">Add to dataset</button>
+<button @onclick="Verify">Verify</button>
+
+
+@learning
+
+<h1>@Result</h1>
+
+
+@if (VerifyOutput != null)
+{
+    @for (int i = 0; i < VerifyOutput.Length; i++)
+        {
+            @string.Concat(new string[]{VerifyOutput[i].ToString(), " - ", ((char)('A' + i)).ToString(), "\n"});
+        }
+}
+
+@code {
+    private ElementReference canvasRef;
+    private bool isDrawing = false;
+    private List<IData> dataset = Letters.set_of_letters;
+
+    private double[] VerifyOutput = null;
+
+    private string learning;
+
+    private string Result;
+
+    private Char inputLetter;
+
+    private async Task Learn()
+    {
+        var imageDataArray = await JS.InvokeAsync<double[]>("drawing.getBinaryImageDataArray", canvasRef);
+
+        //network.learn(dataset);
+
+        learning = "The network is learning...";
+        int numbOfIter = await Http.GetFromJsonAsync<int>("network/learn");
+        learning = "The network has learned.;";
+    }
+
+    private async Task Verify()
+    {
+        var imageDataArray = await JS.InvokeAsync<double[]>("drawing.getBinaryImageDataArray", canvasRef);
+
+        //double[] result = network.getLetter(new Letter(imageDataArray));
+
+        var resultMessage = await Http.PostAsJsonAsync<Letter>("network/verify", new Letter(imageDataArray));
+
+        VerifyOutput = await resultMessage.Content.ReadFromJsonAsync<double[]>();
+
+        double numb = VerifyOutput[0];
+        var index = 0;
+        for(int i = 1; i < VerifyOutput.Length; i++)
+        {
+            if (numb < VerifyOutput[i])
+            {
+                numb = VerifyOutput[i];
+                index = i;
+            }
+        }
+        Result = string.Concat(new string[]{VerifyOutput[index].ToString(), " - ", ((char)('A' + index)).ToString(), "\n"});
+        //for (int i = 0; i < result.Length; i++)
+        //    Console.WriteLine(result[i]);
+    }
+
+    private async Task AddToDataset()
+    {
+        var imageDataArray = await JS.InvokeAsync<double[]>("drawing.getBinaryImageDataArray", canvasRef);
+
+        //dataset.Add(new Letter(imageDataArray));
+        await Http.PostAsJsonAsync<Letter>("network", new Letter(imageDataArray, inputLetter));
+    }
+
+
+
+
+
+
+
+
+
+    private async Task StartDrawing(MouseEventArgs e)
+    {
+        isDrawing = true;
+        await JS.InvokeVoidAsync("drawing.startDrawing", canvasRef, e.ClientX, e.ClientY);
+    }
+
+    private async Task StopDrawing(MouseEventArgs e)
+    {
+        isDrawing = false;
+        await JS.InvokeVoidAsync("drawing.stopDrawing");
+    }
+
+    private async Task Draw(MouseEventArgs e)
+    {
+        if (isDrawing)
+        {
+            await JS.InvokeVoidAsync("drawing.draw", canvasRef, e.ClientX, e.ClientY);
+        }
+    }
+
+    private async Task ClearCanvas()
+    {
+        await JS.InvokeVoidAsync("drawing.clearCanvas", canvasRef);
+    }
+
+    private async Task Resize()
+    {
+        await JS.InvokeVoidAsync("drawing.centerAndResizeDrawing");
+    }
+
+    //private async Task GetImageData()
+    //{
+    //    // Call the JavaScript function and get the image data array
+    //    var imageDataArray = await JS.InvokeAsync<double[]>("drawing.getBinaryImageDataArray", canvasRef);
+
+    //    // Use imageDataArray as needed
+    //    //Console.WriteLine("Image data length: " + imageDataArray);
+
+    //    for (int i = 0; i < 40; i++)
+    //    {
+    //        for (int j = 0; j < 40; j++)
+    //        {
+    //            Console.Write($"{imageDataArray[(i * 40) + j]}, ");
+    //        }
+    //        Console.WriteLine();
+    //    }
+    //}
+}
+
