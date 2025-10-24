@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MultiLevelNeurons.Data;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MultiLevelNeurons
@@ -32,7 +33,7 @@ namespace MultiLevelNeurons
         public Network()
         {
             NeuronCount = 26;
-            HiddenLayerCount = 60;
+            HiddenLayerCount = 30;
             neurons = new Neuron[NeuronCount];
             for (int i = 0; i < neurons.Length; i++)
                 neurons[i] = new Neuron(HiddenLayerCount);
@@ -55,22 +56,23 @@ namespace MultiLevelNeurons
                         global_all_right = false;
 
 
-                    double[] y_output = new double[NeuronCount];
-                    double[] y_middle = new double[HiddenLayerCount];
-                    for (int i = 0; i < HiddenLayerCount; i++)      //get y from middle layer
-                        y_middle[i] = hidden_layer[i].check(dataset[j].X);
+                    //double[] y_output = new double[NeuronCount];
+                    //double[] y_middle = new double[HiddenLayerCount];
+                    //for (int i = 0; i < HiddenLayerCount; i++)      //get y from middle layer
+                    //    y_middle[i] = hidden_layer[i].check(dataset[j].X);
 
-                    Console.WriteLine($"{counter} | ");
-                    for (int i = 0; i < NeuronCount; i++)           //get y from output layer
-                    {        
-                        y_output[i] = neurons[i].check(y_middle);
-                        Console.Write($"{Math.Round(y_output[i], 5)} ");
-                    }
-                    Console.WriteLine();
+                    //Console.WriteLine($"{counter} | ");
+                    //for (int i = 0; i < NeuronCount; i++)           //get y from output layer
+                    //{        
+                    //    y_output[i] = neurons[i].check(y_middle);
+                    //    //Console.Write($"{Math.Round(y_output[i], 5)} ");
+                    //}
+                    //Console.WriteLine();
 
 
                 }
                 iteration++;
+                Console.WriteLine(iteration);
             }
             return iteration;
         }

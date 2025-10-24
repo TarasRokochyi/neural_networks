@@ -1,5 +1,109 @@
 [
   {
+    "ContainingType": "MultiLevelNeuronsApi.Controllers.GeneralNNController",
+    "Method": "Learntest",
+    "RelativePath": "GeneralNN",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MultiLevelNeuronsApi.Controllers.GeneralNNController",
+    "Method": "AddDataToDataset",
+    "RelativePath": "GeneralNN/addtodataset",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "System.Collections.Generic.List\u00601[[GeneralNN.Instance, GeneralNN, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiLevelNeuronsApi.Controllers.GeneralNNController",
+    "Method": "Create",
+    "RelativePath": "GeneralNN/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createModel",
+        "Type": "GeneralNN.CreateGeneralNNModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiLevelNeuronsApi.Controllers.GeneralNNController",
+    "Method": "Learn",
+    "RelativePath": "GeneralNN/learn",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "learnModel",
+        "Type": "GeneralNN.LearnModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MultiLevelNeuronsApi.Controllers.GeneralNNController",
+    "Method": "Verify",
+    "RelativePath": "GeneralNN/verify",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "GeneralNN.Instance",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Double[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "MultiLevelNeuronsApi.Controllers.MedicalDiagnosticController",
     "Method": "AddDataToDataset",
     "RelativePath": "MedicalDiagnostic",
@@ -9,7 +113,7 @@
     "Parameters": [
       {
         "Name": "data",
-        "Type": "MultiLevelNeurons.MedicalCase",
+        "Type": "MultiLevelNeurons.Data.MedicalCase",
         "IsRequired": true
       }
     ],
@@ -61,7 +165,7 @@
     "Parameters": [
       {
         "Name": "data",
-        "Type": "MultiLevelNeurons.MedicalCase",
+        "Type": "MultiLevelNeurons.Data.MedicalCase",
         "IsRequired": true
       }
     ],
@@ -87,7 +191,7 @@
     "Parameters": [
       {
         "Name": "data",
-        "Type": "MultiLevelNeurons.Letter",
+        "Type": "MultiLevelNeurons.Data.Letter",
         "IsRequired": true
       }
     ],
@@ -100,7 +204,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "iter",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Int32",
@@ -123,7 +233,7 @@
     "Parameters": [
       {
         "Name": "data",
-        "Type": "MultiLevelNeurons.Letter",
+        "Type": "MultiLevelNeurons.Data.Letter",
         "IsRequired": true
       }
     ],
@@ -138,26 +248,5 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "MultiLevelNeuronsApi.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[MultiLevelNeuronsApi.WeatherForecast, MultiLevelNeuronsApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

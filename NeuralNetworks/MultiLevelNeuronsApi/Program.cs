@@ -48,8 +48,14 @@ namespace MultiLevelNeuronsApi
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddControllers();
 
+            // had to create Medical services cause the dataset in controller was not saving through each request to controller
+            // the dataset is moved to medical service, and medical service is created as a singleton
+            // this way the dataset stays unchanged through every request
             builder.Services.AddSingleton<IMedicalDatasetService, MedicalDatasetService>();
+            builder.Services.AddSingleton<IGeneralNNService, GeneralNNService>();
             builder.Services.AddSingleton<Network, Network>();
 
             builder.Services.AddControllersWithViews();

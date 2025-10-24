@@ -1,0 +1,367 @@
+﻿@page "/neural-simulator"
+@inject HttpClient Http
+@using GeneralNN
+
+<h3 class="text-center my-4">Neural Network Simulator</h3>
+
+<div class="container">
+    <!-- Input Layer Configuration -->
+    <div class="card mb-4">
+        <div class="card-header">Вхідний шар</div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label>Кількість нейронів вхідного шару</label>
+                <input type="number" class="form-control" @bind="InputNeurons" min="1" />
+            </div>
+            <div class="mb-3">
+                <label>Тип активаційної функції</label>
+                <select class="form-select" @bind="InputActivation">
+                    <option value="@ActivationType.Linear">Linear</option>
+                    <option value="@ActivationType.Sigmoid">Sigmoid</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Layer Configuration -->
+    <div class="card mb-4">
+        <div class="card-header">Приховані шари</div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label>Кількість прихованих шарів</label>
+                <input type="number" class="form-control" @bind="HiddenLayersCount" min="1" max="5" @oninput="OnHiddenLaersCountChanged"/>
+            </div>
+            <div class="mb-3" style="display: flex; gap: 5px;">
+                <label>Кількість нейронів</label>
+                @for (int i = 0; i < HiddenLayerNeurons.Length; i++)
+                {
+                    var curr_index = i;
+                    <input type="number" class="form-control" style="width: 60px;" @bind="HiddenLayerNeurons[curr_index]" min="1" />
+                }
+            </div>
+            <div class="mb-3">
+                <label>Тип активаційної функції</label>
+                <select class="form-select" @bind="HiddenActivation">
+                    <option value="@ActivationType.Linear">Linear</option>
+                    <option value="@ActivationType.Sigmoid">Sigmoid</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Output Layer Configuration -->
+    <div class="card mb-4">
+        <div class="card-header">Вихідний шар</div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label>Кількість нейронів вихідного шару</label>
+                <input type="number" class="form-control" @bind="OutputNeurons" min="1" />
+            </div>
+            <div class="mb-3">
+                <label>Тип активаційної функції</label>
+                <select class="form-select" @bind="OutputActivation">
+                    <option value="@ActivationType.Linear">Linear</option>
+                    <option value="@ActivationType.Sigmoid">Sigmoid</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Control Buttons -->
+    <button class="btn btn-primary w-100 mb-3" @onclick="CreateNetwork">Створити мережу</button>
+
+    <!-- Dataset Table -->
+    <div class="card mb-4">
+        <div class="card-header">Дані для навчання</div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        @for (int i = 0; i < InputNeurons; i++)
+                        {
+                            <th>Input @i</th>
+                        }
+                        @for (int i = 0; i < OutputNeurons; i++)
+                        {
+                            <th>Output @i</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var row in Dataset)
+                    {
+                        <tr>
+                            @for (int i = 0; i < InputNeurons; i++)
+                            {
+                                var local_index = i;
+                                <td><input type="number" class="form-control" @bind="row.X[local_index]" /></td>
+                            }
+                            @for (int i = 0; i < OutputNeurons; i++)
+                            {
+                                var local_index = i;
+                                <td><input type="number" class="form-control" @bind="row.d[local_index]" /></td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <button class="btn btn-secondary mb-3" @onclick="AddRow">Додати рядок</button>
+            <div class="form-check">
+                <input type="radio" id="trainToAccuracy" name="trainType" class="form-check-input"
+                       @onchange="() => SetLearningType(true)" checked="@TrainToAccuracy" />
+                <label class="form-check-label" for="trainToAccuracy">Вчити до точності</label>
+                @if (TrainToAccuracy)
+                {
+                    <input type="number" class="form-control mt-2" placeholder="Точність (%)" @bind="Accuracy" min="0" max="100" />
+                }
+            </div>
+            <div class="form-check">
+                <input type="radio" id="trainToIterations" name="trainType" class="form-check-input"
+                       @onchange="() => SetLearningType(false)" checked="@TrainIterations" />
+                <label class="form-check-label" for="trainToIterations">Вчити задану кількість ітерацій</label>
+                @if (TrainIterations)
+                {
+                    <input type="number" class="form-control mt-2" placeholder="Кількість ітерацій" @bind="Iterations" min="1" />
+                }
+            </div>
+            <button class="btn btn-primary w-100" @onclick="StartTraining">Навчити</button>
+        </div>
+    </div>
+
+
+    <!-- Learning Configuration 
+    <div class="card mb-4">
+        <div class="card-header">Налаштування навчання</div>
+        <div class="card-body">
+            <div class="form-check">
+                <input type="radio" id="trainToAccuracy" name="trainType" class="form-check-input"
+                       @onchange="() => SetLearningType(true)" checked="@TrainToAccuracy" />
+                <label class="form-check-label" for="trainToAccuracy">Вчити до точності</label>
+                @if (TrainToAccuracy)
+                {
+                    <input type="number" class="form-control mt-2" placeholder="Точність (%)" @bind="Accuracy" min="0" max="100" />
+                }
+            </div>
+            <div class="form-check">
+                <input type="radio" id="trainToIterations" name="trainType" class="form-check-input"
+                       @onchange="() => SetLearningType(false)" checked="@TrainIterations" />
+                <label class="form-check-label" for="trainToIterations">Вчити задану кількість ітерацій</label>
+                @if (TrainIterations)
+                {
+                    <input type="number" class="form-control mt-2" placeholder="Кількість ітерацій" @bind="Iterations" min="1" />
+                }
+            </div>
+        </div>
+    </div>-->
+
+    <!-- Verificaiton table -->
+     <div class="card mb-4">
+        <div class="card-header">Перевірка</div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        @for (int i = 0; i < InputNeurons; i++)
+                        {
+                            <th>Input @i</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var row in VerifyDataset)
+                    {
+                        <tr>
+                            @for (int i = 0; i < InputNeurons; i++)
+                            {
+                                var local_index = i;
+                                <td><input type="number" class="form-control" @bind="row.X[local_index]" /></td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <button class="btn btn-secondary mb-3" @onclick="AddVerifyRow">Додати рядок</button>
+            <button class="btn btn-primary w-100" @onclick="Verify">Перевірити</button>
+        </div>
+    </div>
+
+
+    <!-- Result Section -->
+    <div class="card">
+        <div class="card-header">Результат</div>
+        <div class="card-body">
+            <div>@ResultMessage</div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private int InputNeurons = 1;
+    private int OutputNeurons = 1;
+    private int HiddenLayersCount = 0;
+    private int[] HiddenLayerNeurons = Array.Empty<int>(); // Adjust size as needed
+
+    private ActivationType InputActivation { get; set; } = ActivationType.Linear;
+    private ActivationType HiddenActivation { get; set; } = ActivationType.Sigmoid;
+    private ActivationType OutputActivation { get; set; } = ActivationType.Linear;
+
+    private List<Instance> Dataset { get; set; } = new List<Instance>();
+
+    private bool TrainToAccuracy { get; set; } = true;
+    private bool TrainIterations { get; set; } = false;
+    private double Accuracy { get; set; }
+    private int Iterations { get; set; }
+
+    private string ResultMessage { get; set; }
+
+    private void OnHiddenLaersCountChanged(ChangeEventArgs e)
+    {
+        // Resize the HiddenLayerNeurons array based on the new HiddenLayersCount
+        if (int.TryParse(e.Value.ToString(), out int count))
+        {
+            // Resize the array to match the new HiddenLayersCount
+            int[] newArray = new int[count];
+            for (int i = 0; i < Math.Min(HiddenLayerNeurons.Length, newArray.Length); i++)
+            {
+                newArray[i] = HiddenLayerNeurons[i];
+            }
+            HiddenLayerNeurons = newArray;
+        }
+
+        StateHasChanged();
+    }
+
+    private void SetLearningType(bool toAccuracy)
+    {
+        TrainToAccuracy = toAccuracy;
+        TrainIterations = !toAccuracy;
+    }
+
+
+    private async Task CreateNetwork()
+    {
+        // just place all the layers count into one array
+        int[] layers = new int[HiddenLayersCount + 2];
+        layers[0] = InputNeurons;
+        for (int i = 1; i < layers.Length - 1; i++){
+            layers[i] = HiddenLayerNeurons[i - 1];
+        }
+        layers[layers.Length - 1] = OutputNeurons;
+
+        var createModel = new CreateGeneralNNModel(InputActivation, HiddenActivation, OutputActivation, layers);
+
+        var response = await Http.PostAsJsonAsync<CreateGeneralNNModel>("generalnn/create", createModel);
+        ResultMessage = await response.Content.ReadAsStringAsync();
+    }
+
+    private void AddRow()
+    {
+        Dataset.Add(new Instance(new double[InputNeurons], new double[OutputNeurons]));
+    }
+
+    private async Task StartTraining()
+    {
+        var responsed = await Http.PostAsJsonAsync<List<Instance>>("GeneralNN/addtodataset", Dataset);
+
+        var typeOfLearning = TrainToAccuracy ? TypeOfLearning.Accuracy : TypeOfLearning.Iteration;
+        var learnModel = new LearnModel(typeOfLearning, Accuracy, Iterations);
+
+        var response = await Http.PostAsJsonAsync<LearnModel>("GeneralNN/learn", learnModel);
+        ResultMessage = await response.Content.ReadAsStringAsync();
+    }
+
+    private List<Instance> VerifyDataset { get; set; } = new List<Instance>();
+
+    private void AddVerifyRow()
+    {
+        VerifyDataset.Add(new Instance(new double[InputNeurons], new double[OutputNeurons]));
+    }
+
+    private async void Verify()
+    {
+        ResultMessage = "";
+        foreach(var row in VerifyDataset)
+        {
+            var resultMessage = await Http.PostAsJsonAsync<Instance>("GeneralNN/verify", row);
+            var response = await resultMessage.Content.ReadFromJsonAsync <double[]>();
+            foreach(var resp in response)
+            {
+                ResultMessage += resp.ToString() + "\n";
+            }
+        }
+
+
+        // double numb = VerifyOutput[0];
+        // var index = 0;
+        // for(int i = 1; i < VerifyOutput.Length; i++)
+        // {
+        //     if (numb < VerifyOutput[i])
+        //     {
+        //         numb = VerifyOutput[i];
+        //         index = i;
+        //     }
+        // }
+        StateHasChanged();
+        //Result = string.Concat(new string[]{VerifyOutput[index].ToString(), " - ", ((char)('A' + index)).ToString(), "\n"});
+    }
+
+    //private int InputNeurons { get; set; }
+    //private int OutputNeurons { get; set; }
+    //private int HiddenLayersCount { get; set; }
+    //private int[] HiddenLayerNeurons { get; set; } = new int[5]; // Adjust size as needed
+
+    //private string InputActivation { get; set; } = "relu";
+    //private string HiddenActivation { get; set; } = "relu";
+    //private string OutputActivation { get; set; } = "sigmoid";
+
+    //private bool TrainToAccuracy { get; set; }
+    //private bool TrainIterations { get; set; }
+    //private double DesiredAccuracy { get; set; }
+    //private int IterationCount { get; set; }
+
+    //private string ResultMessage { get; set; }
+
+    //private async Task CreateNetwork()
+    //{
+    //    // just place all the layers count into one array
+    //    int[] layers = new int[HiddenLayersCount + 2];
+    //    layers[0] = InputNeurons;
+    //    for (int i = 1; i < layers.Length - 1; i++){
+    //        layers[i] = HiddenLayerNeurons[i - 1];
+    //    }
+    //    layers[layers.Length - 1] = OutputNeurons;
+
+    //    var networkConfig = new
+    //    {
+    //        layers,
+    //        InputActivation,
+    //        HiddenActivation,
+    //        OutputActivation
+    //    };
+
+    //    var response = await Http.PostAsJsonAsync("api/simulator/create-network", networkConfig);
+    //    ResultMessage = await response.Content.ReadAsStringAsync();
+    //}
+
+    //private async Task OnTrainingDataUploaded(ChangeEventArgs e)
+    //{
+    //    var files = ((IEnumerable<IBrowserFile>)e.Value).ToList();
+    //    if (files.Count > 0)
+    //    {
+    //        // Upload file logic here
+    //    }
+    //}
+
+    //private async Task StartTraining()
+    //{
+    //    var trainingConfig = new
+    //    {
+    //        TrainToAccuracy,
+    //        TrainIterations,
+    //        DesiredAccuracy,
+    //        IterationCount
+    //    };
+    //    var response = await Http.PostAsJsonAsync("api/simulator/start-training", trainingConfig);
+    //    ResultMessage = await response.Content.ReadAsStringAsync();
+    //}
+}

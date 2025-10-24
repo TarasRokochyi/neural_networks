@@ -1,0 +1,46 @@
+(deftemplate spivrobitnyk "Співробітник"
+(slot surname)
+(slot experience)
+(slot child_amount)
+(slot salary)
+)
+
+(deftemplate premia
+(slot surname)
+(slot sum)
+)
+
+(deffacts spivrobitnyki
+(spivrobitnyk (surname rokochyi) (experience 5)(child_amount 2) (salary 2000))
+(spivrobitnyk (surname danchul) (experience 2)(child_amount 1) (salary 1500))
+(spivrobitnyk (surname sautkin) (experience 3)(child_amount 2) (salary 1750))
+(spivrobitnyk (surname muratori) (experience 20)(child_amount 3) (salary 20000))
+(spivrobitnyk (surname blow) (experience 25)(child_amount 4) (salary 25000)))
+
+(assert (spivrobitnyk (surname "rokochyi") (experience 5) (child_amount 2) (salary 2000)))
+(assert (spivrobitnyk (surname "danchul") ( experience 2) ( child_amount 1)(salary 15000)))
+(assert (spivrobitnyk (surname "sautkin") ( experience 3) ( child_amount 2)(salary 1750)))
+(assert (spivrobitnyk (surname "muratori") ( experience 20) ( child_amount 3)(salary 20000)))
+(assert (spivrobitnyk (surname "blow") ( experience 25) ( child_amount 4)(salary 25000)))
+
+
+(defrule findprem
+?spiv <- (spivrobitnyk (surname ?s) (experience ?e) (child_amount ?c)(salary ?sal))
+(test (or (>= ?e 5) (> ?c 2)))
+=>
+(assert (premia (surname ?s) (sum (* ?sal 0.2))))
+)
+
+(defrule findveteran
+?spiv <- (spivrobitnyk (surname ?s) (experience ?e) (child_amount ?c)(salary ?sal))
+(test (> ?e 20))
+=>
+(printout t ?s " is a veteran" crlf)
+)
+
+(defrule checkprem
+?spiv <- (spivrobitnyk (surname ?s) (experience ?e) (child_amount ?c)(salary ?sal))
+(test (and (< ?e 5) (<= ?c 2)))
+=>
+(printout t ?s " did not get premia!" crlf)
+)

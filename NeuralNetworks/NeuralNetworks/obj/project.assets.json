@@ -492,6 +492,16 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
+      "GeneralNN/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/GeneralNN.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GeneralNN.dll": {}
+        }
+      },
       "MultiLevelNeurons/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -986,6 +996,16 @@
         },
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
+        }
+      },
+      "GeneralNN/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/GeneralNN.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GeneralNN.dll": {}
         }
       },
       "MultiLevelNeurons/1.0.0": {
@@ -2069,6 +2089,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "GeneralNN/1.0.0": {
+      "type": "project",
+      "path": "../GeneralNN/GeneralNN.csproj",
+      "msbuildProject": "../GeneralNN/GeneralNN.csproj"
+    },
     "MultiLevelNeurons/1.0.0": {
       "type": "project",
       "path": "../MultiLevelNeurons/MultiLevelNeurons.csproj",
@@ -2077,6 +2102,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "GeneralNN >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 8.0.8",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 8.0.8",
       "Microsoft.NET.ILLink.Tasks >= 8.0.8",
@@ -2090,11 +2116,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\NeuralNetworks.csproj",
+      "projectUniqueName": "C:\\Users\\tarro\\Desktop\\neural_networks\\NeuralNetworks\\NeuralNetworks\\NeuralNetworks.csproj",
       "projectName": "NeuralNetworks",
-      "projectPath": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\NeuralNetworks.csproj",
+      "projectPath": "C:\\Users\\tarro\\Desktop\\neural_networks\\NeuralNetworks\\NeuralNetworks\\NeuralNetworks.csproj",
       "packagesPath": "C:\\Users\\tarro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NeuralNetworks\\obj\\",
+      "outputPath": "C:\\Users\\tarro\\Desktop\\neural_networks\\NeuralNetworks\\NeuralNetworks\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tarro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2112,8 +2138,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\MultiLevelNeurons.csproj": {
-              "projectPath": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\MultiLevelNeurons.csproj"
+            "C:\\Users\\tarro\\Desktop\\neural_networks\\NeuralNetworks\\GeneralNN\\GeneralNN.csproj": {
+              "projectPath": "C:\\Users\\tarro\\Desktop\\neural_networks\\NeuralNetworks\\GeneralNN\\GeneralNN.csproj"
+            },
+            "C:\\Users\\tarro\\Desktop\\neural_networks\\NeuralNetworks\\MultiLevelNeurons\\MultiLevelNeurons.csproj": {
+              "projectPath": "C:\\Users\\tarro\\Desktop\\neural_networks\\NeuralNetworks\\MultiLevelNeurons\\MultiLevelNeurons.csproj"
             }
           }
         }

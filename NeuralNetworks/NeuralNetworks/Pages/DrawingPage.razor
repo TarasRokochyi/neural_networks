@@ -1,9 +1,10 @@
 ﻿@page "/drawing"
 @inject IJSRuntime JS
 @inject HttpClient Http
-@using MultiLevelNeurons
+@using MultiLevelNeurons;
+@using MultiLevelNeurons.Data
 
-<canvas @ref="canvasRef" width="40" height="40"
+@*<canvas @ref="canvasRef" width="40" height="40"
         @onmousedown="StartDrawing"
         @onmouseup="StopDrawing"
         @onmousemove="Draw"
@@ -14,9 +15,12 @@
 
 <button @onclick="ClearCanvas">Clear</button>
 <button @onclick="Resize">Resize</button>
-<button @onclick="Learn">Learn</button>
 <button @onclick="AddToDataset">Add to dataset</button>
 <button @onclick="Verify">Verify</button>
+<p>
+    <button @onclick="Learn">Learn</button>
+    <input id="iterinput" type="number" @bind="iter" placeholder="iteratoins for genetic algorithm" /> 
+</p>
 
 
 @learning
@@ -30,7 +34,60 @@
         {
             @string.Concat(new string[]{VerifyOutput[i].ToString(), " - ", ((char)('A' + i)).ToString(), "\n"});
         }
-}
+}*@
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <canvas @ref="canvasRef" width="40" height="40"
+                    @onmousedown="StartDrawing"
+                    @onmouseup="StopDrawing"
+                    @onmousemove="Draw"
+                    class="border border-dark"
+                    style="width: 150px; height: 150px;">
+            </canvas>
+        </div>
+        <div class="col-md-6">
+            <input id="letterInput" type="text" @bind="inputLetter" class="form-control mb-2" placeholder="Write the letter you drew" />
+
+            <div class="d-grid gap-2">
+                <button @onclick="ClearCanvas" class="btn btn-secondary">Clear</button>
+                <button @onclick="Resize" class="btn btn-primary">Resize</button>
+                <button @onclick="AddToDataset" class="btn btn-success">Add to dataset</button>
+                <button @onclick="Verify" class="btn btn-warning">Verify</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="d-flex align-items-center">
+                <button @onclick="Learn" class="btn btn-info me-2">Learn</button>
+                <p>
+                 <label>Iter</label>   
+                <input id="iterinput" type="number" @bind="iter" class="form-control" placeholder="Iterations for genetic algorithm" />
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h1 class="text-center">@Result</h1>
+            @if (VerifyOutput != null)
+            {
+                <ul class="list-group">
+                    @for (int i = 0; i < VerifyOutput.Length; i++)
+                    {
+                        <li class="list-group-item">
+                            @string.Concat(new string[] { VerifyOutput[i].ToString(), " - ", ((char)('A' + i)).ToString() })
+                        </li>
+                    }
+                </ul>
+            }
+        </div>
+    </div>
+</div>
 
 @code {
     private ElementReference canvasRef;
@@ -44,6 +101,7 @@
     private string Result;
 
     private Char inputLetter;
+    private int iter = 0;
 
     private async Task Learn()
     {
@@ -52,7 +110,7 @@
         //network.learn(dataset);
 
         learning = "The network is learning...";
-        int numbOfIter = await Http.GetFromJsonAsync<int>("network/learn");
+        int numbOfIter = await Http.GetFromJsonAsync<int>($"network/learn?iter={iter}");
         learning = "The network has learned.;";
     }
 

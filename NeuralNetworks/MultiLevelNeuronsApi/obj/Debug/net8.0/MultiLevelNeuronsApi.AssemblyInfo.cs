@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MultiLevelNeuronsApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af544cc23155cc26dbcb2898d5552fbc50083d6e")]
 [assembly: System.Reflection.AssemblyProductAttribute("MultiLevelNeuronsApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MultiLevelNeuronsApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

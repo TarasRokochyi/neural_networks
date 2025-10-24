@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MultiLevelNeurons;
+using MultiLevelNeurons.Data;
+using MultiLevelNeurons.Genetic;
 
 namespace MultiLevelNeuronsApi.Controllers
 {
@@ -18,8 +20,13 @@ namespace MultiLevelNeuronsApi.Controllers
         }
 
         [HttpGet("learn")]
-        public async Task<ActionResult<int>> Learn()
+        public async Task<ActionResult<int>> Learn([FromQuery]int iter)
         {
+            if (iter == 0)
+            {
+                Genetic gen = new Genetic(network, 20, 1, 0.3);
+                gen.Evolution(dataset, iter);
+            }
             int numbOfIter = network.learn(dataset);
 
             return Ok(numbOfIter);

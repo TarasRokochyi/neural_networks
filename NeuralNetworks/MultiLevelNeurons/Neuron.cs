@@ -10,7 +10,7 @@ namespace MultiLevelNeurons
     {
         public double[] w;
         public double w0;
-        public static Random rand = new Random();
+        public static Random rand = new Random(123);
         public Neuron(int w_quantity)
         {
             w = new double[w_quantity];

@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "NeuralNetworks",
   "resources": {
-    "hash": "sha256-q9jk7/oQNXFn7C5zQRX6lQ3r9BbaNLsiwR4K/kHVgjo=",
+    "hash": "sha256-Tb970Wcbb6v2ENLEQrB3Izz5BoC3yeQHgX/VZHVYX6M=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.janxpebwgc.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
@@ -208,12 +208,14 @@
       "mscorlib.wasm": "sha256-Gz8PyW2/fwihe5ul81OwmRUrU71r+KtbyRw6xlOGD+Q=",
       "netstandard.wasm": "sha256-jMTqIQzoDS810lyhZpMO5eEC36EzntXqSVn+2qwkOMQ=",
       "System.Private.CoreLib.wasm": "sha256-NFj5WE5VLP2LptZIRJCUIc1AMk06FmxpsSILfPISwAw=",
-      "MultiLevelNeurons.wasm": "sha256-sJhD6/u4nh8cIa90Q9jjyXxO+tkhrR1uZ4MclRU/RBg=",
-      "NeuralNetworks.wasm": "sha256-vC3EfohKQBZeR0eZsLgzSku/fC0Qy7DDqLhReanmM3g="
+      "GeneralNN.wasm": "sha256-XrTyYP45S2++043bRLEeCLz4bhBmyP572Z0Ibl4HyuE=",
+      "MultiLevelNeurons.wasm": "sha256-XuuRSmZoQ3S9rNntwLI/cY6IXL/pTGC97C+VAO69h0k=",
+      "NeuralNetworks.wasm": "sha256-SoGxceVmRPt46NT2eRVVIMhFOmsGuuSKD7F9SypM8wI="
     },
     "pdb": {
-      "MultiLevelNeurons.pdb": "sha256-Lj0SuRK0oWXu3b5bsjrBG1XZX/iIaSNKstOd+OLvAWk=",
-      "NeuralNetworks.pdb": "sha256-kPtR84KFZizlqVIDvogsBWkWpPtZJ/Wl7ktTs4ro3UQ="
+      "GeneralNN.pdb": "sha256-oqvUbxqjpe97lqo46NVROn9NtepD6/MPWpN475hhaWA=",
+      "MultiLevelNeurons.pdb": "sha256-0jdGrL0+45uR32XLCoZNxZQbZJ95+WXplPVZgN9KRlA=",
+      "NeuralNetworks.pdb": "sha256-r/sDHwqrthmstwyHCbdNxu3OaeaRR6gQ6t43VXD8ECM="
     }
   },
   "cacheBootResources": true,

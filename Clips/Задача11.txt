@@ -1,0 +1,70 @@
+(clear)
+(deftemplate person
+(slot name (type SYMBOL))
+(slot vkrav (type NUMBER))
+(slot kaje (type NUMBER) (default -1))
+(slot testedVkrav (type SYMBOL) (default FALSE))
+(slot testedKaje (type SYMBOL) (default FALSE))
+)
+
+(deffacts people
+(person (name vasul) (vkrav 1) (kaje 1))
+(person (name ivan) (vkrav 1) )
+(person (name petro) (vkrav 1) (kaje 0))
+(person (name mukola) (vkrav 1) )
+)
+
+
+(defrule vasulTrueRul
+?p <- (person (name vasul) (vkrav ?vkrav) (kaje ?kaje) (testedVkrav FALSE))
+?p1 <- (person (name ivan))
+?p2 <- (person (name mukola))
+(test (= ?kaje 1))
+=>
+(modify ?p1 (vkrav 0))
+(modify ?p2 (vkrav 0))
+(modify ?p (testedVkrav TRUE))
+)
+
+(defrule petroFalseRul
+?p <- (person (name petro) (vkrav ?vkrav) (kaje ?kaje)(testedVkrav FALSE))
+?p1 <- (person (name vasul))
+(test (= ?kaje 0))
+=>
+(modify ?p1 (vkrav 0))
+(modify ?p (testedVkrav TRUE))
+)
+
+(defrule checkIvanTrue
+?p <- (person (name ?name)(vkrav 1)(kaje ?kaje)(testedVkrav TRUE))
+?pIvan <- (person (name ivan)(testedKaje FALSE))
+(test (or (eq ?name vasul) (eq ?name petro)))
+=>
+(modify ?pIvan (kaje 1)(testedKaje TRUE))
+)
+
+(defrule checkIvanFalse
+?p <- (person (name ?name)(vkrav 1)(kaje ?kaje)(testedVkrav TRUE))
+?pIvan <- (person (name ivan)(testedKaje FALSE))
+(test (eq ?name mukola))
+=>
+(modify ?pIvan (kaje 0)(testedKaje TRUE))
+)
+
+
+(defrule checkMukolaTrue
+?p <- (person (name ?name)(vkrav 1)(kaje ?kaje)(testedVkrav TRUE))
+?pMukola <- (person (name mukola)(testedKaje FALSE))
+(test (or (eq ?name vasul) (eq ?name ivan)))
+=>
+(modify ?pMukola (kaje 1)(testedKaje TRUE))
+)
+
+(defrule checkMukolaFalse
+?p <- (person (name ?name)(vkrav 1)(kaje ?kaje)(testedVkrav TRUE))
+?pMukola <- (person (name mukola)(testedKaje FALSE))
+(test (eq ?name petro) )
+=>
+(modify ?pMukola (kaje 0)(testedKaje TRUE))
+)
+

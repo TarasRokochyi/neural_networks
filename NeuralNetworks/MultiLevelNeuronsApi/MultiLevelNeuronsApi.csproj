@@ -12,8 +12,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GeneralNN\GeneralNN.csproj" />
     <ProjectReference Include="..\MultiLevelNeurons\MultiLevelNeurons.csproj" />
     <ProjectReference Include="..\NeuralNetworks\NeuralNetworks.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

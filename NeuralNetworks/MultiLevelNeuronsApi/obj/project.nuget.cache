@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xn7zuybEwj4=",
+  "dgSpecHash": "DOXzuCB6Bo8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj",
+  "projectFilePath": "C:\\Users\\tarro\\Desktop\\neural_networks\\NeuralNetworks\\MultiLevelNeuronsApi\\MultiLevelNeuronsApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tarro\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.8\\microsoft.aspnetcore.authorization.8.0.8.nupkg.sha512",
     "C:\\Users\\tarro\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.8\\microsoft.aspnetcore.components.8.0.8.nupkg.sha512",

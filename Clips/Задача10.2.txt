@@ -1,0 +1,45 @@
+(deftemplate tovar
+(slot name)
+(slot price)
+(slot amount)
+(slot year)
+(slot country)
+)
+
+(deftemplate ucinka
+(slot name)
+(slot sum)
+)
+
+(deftemplate nacinka
+(slot name)
+(slot sum)
+)
+
+(deffacts tovari
+(tovar (name desktop) (price 15000) (amount 200) (year 2008)(country "ukraine"))
+(tovar (name laptop)(price 17000)(amount 300)(year 2020)(country "usa"))
+(tovar (name smartphone)(price 11000)(amount 3)(year 2020)(country "usa"))
+(tovar (name ebook)(price 400)(amount 150)(year 2009)(country "ukraine"))
+(tovar (name mouse)(price 50)(amount 400)(year 2006)(country "usa"))
+)
+
+(defrule setucinka
+?tov <- (tovar (name ?n)(price ?p)(amount ?a)(year ?y)(country ?c))
+(test (or(< ?a 4)(< ?y 2010)))
+=>
+(assert (ucinka (name ?n)(sum (* ?p 0.15))))
+)
+
+(defrule setnacinka
+?tov <- (tovar (name ?n)(price ?p)(amount ?a)(year ?y)(country ?c))
+(test (= ?y 2020))
+=>
+(assert (nacinka (name ?n)(sum (* ?p 0.07))))
+)
+
+(defrule findukr
+?tov <- (tovar (name ?n)(price ?p)(amount ?a)(year ?y)(country "ukraine"))
+=>
+(printout t ?n " made in ukraine" crlf)
+)

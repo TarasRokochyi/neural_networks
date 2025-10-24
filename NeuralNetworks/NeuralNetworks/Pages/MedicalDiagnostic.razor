@@ -2,6 +2,7 @@
 
 @inject HttpClient Http
 @using MultiLevelNeurons
+@using MultiLevelNeurons.Data
 
 
 <h3>Select Symptoms</h3>
@@ -256,6 +257,7 @@
                 }
             }
 
+            //var responsetest = await Http.GetFromJsonAsync<int>("generalnn");
             await Http.PostAsJsonAsync<CreateModel>("medicalDiagnostic/create", new CreateModel(selectedDiagnoses.Count, 10, selectedSymptoms.Count));
         }
     }
@@ -315,6 +317,7 @@
                 index = i;
             }
         }
+        StateHasChanged();
         //Result = string.Concat(new string[]{VerifyOutput[index].ToString(), " - ", ((char)('A' + index)).ToString(), "\n"});
     }
 

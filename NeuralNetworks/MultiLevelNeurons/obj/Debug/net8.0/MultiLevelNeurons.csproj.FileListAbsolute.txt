@@ -9,3 +9,15 @@ C:\Users\tarro\source\repos\NeuralNetworks\MultiLevelNeurons\obj\Debug\net8.0\Mu
 C:\Users\tarro\source\repos\NeuralNetworks\MultiLevelNeurons\obj\Debug\net8.0\refint\MultiLevelNeurons.dll
 C:\Users\tarro\source\repos\NeuralNetworks\MultiLevelNeurons\obj\Debug\net8.0\MultiLevelNeurons.pdb
 C:\Users\tarro\source\repos\NeuralNetworks\MultiLevelNeurons\obj\Debug\net8.0\ref\MultiLevelNeurons.dll
+C:\Users\tarro\Desktop\neural_networks\NeuralNetworks\MultiLevelNeurons\bin\Debug\net8.0\MultiLevelNeurons.deps.json
+C:\Users\tarro\Desktop\neural_networks\NeuralNetworks\MultiLevelNeurons\bin\Debug\net8.0\MultiLevelNeurons.dll
+C:\Users\tarro\Desktop\neural_networks\NeuralNetworks\MultiLevelNeurons\bin\Debug\net8.0\MultiLevelNeurons.pdb
+C:\Users\tarro\Desktop\neural_networks\NeuralNetworks\MultiLevelNeurons\obj\Debug\net8.0\MultiLevelNeurons.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tarro\Desktop\neural_networks\NeuralNetworks\MultiLevelNeurons\obj\Debug\net8.0\MultiLevelNeurons.AssemblyInfoInputs.cache
+C:\Users\tarro\Desktop\neural_networks\NeuralNetworks\MultiLevelNeurons\obj\Debug\net8.0\MultiLevelNeurons.AssemblyInfo.cs
+C:\Users\tarro\Desktop\neural_networks\NeuralNetworks\MultiLevelNeurons\obj\Debug\net8.0\MultiLevelNeurons.csproj.CoreCompileInputs.cache
+C:\Users\tarro\Desktop\neural_networks\NeuralNetworks\MultiLevelNeurons\obj\Debug\net8.0\MultiLevelNeurons.sourcelink.json
+C:\Users\tarro\Desktop\neural_networks\NeuralNetworks\MultiLevelNeurons\obj\Debug\net8.0\MultiLevelNeurons.dll
+C:\Users\tarro\Desktop\neural_networks\NeuralNetworks\MultiLevelNeurons\obj\Debug\net8.0\refint\MultiLevelNeurons.dll
+C:\Users\tarro\Desktop\neural_networks\NeuralNetworks\MultiLevelNeurons\obj\Debug\net8.0\MultiLevelNeurons.pdb
+C:\Users\tarro\Desktop\neural_networks\NeuralNetworks\MultiLevelNeurons\obj\Debug\net8.0\ref\MultiLevelNeurons.dll

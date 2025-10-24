@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NetworkConsoleTest\\NetworkConsoleTest.csproj",
+      "projectUniqueName": "C:\\Users\\tarro\\Desktop\\neural_networks\\NeuralNetworks\\NetworkConsoleTest\\NetworkConsoleTest.csproj",
       "projectName": "NetworkConsoleTest",
-      "projectPath": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NetworkConsoleTest\\NetworkConsoleTest.csproj",
+      "projectPath": "C:\\Users\\tarro\\Desktop\\neural_networks\\NeuralNetworks\\NetworkConsoleTest\\NetworkConsoleTest.csproj",
       "packagesPath": "C:\\Users\\tarro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\NetworkConsoleTest\\obj\\",
+      "outputPath": "C:\\Users\\tarro\\Desktop\\neural_networks\\NeuralNetworks\\NetworkConsoleTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tarro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,8 +54,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\MultiLevelNeurons.csproj": {
-              "projectPath": "C:\\Users\\tarro\\source\\repos\\NeuralNetworks\\MultiLevelNeurons\\MultiLevelNeurons.csproj"
+            "C:\\Users\\tarro\\Desktop\\neural_networks\\NeuralNetworks\\MultiLevelNeurons\\MultiLevelNeurons.csproj": {
+              "projectPath": "C:\\Users\\tarro\\Desktop\\neural_networks\\NeuralNetworks\\MultiLevelNeurons\\MultiLevelNeurons.csproj"
             }
           }
         }

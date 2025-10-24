@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiLevelNeurons
+namespace MultiLevelNeurons.Data
 {
     public class Letter : IData
     {
@@ -12,15 +12,15 @@ namespace MultiLevelNeurons
         public char letter { get; set; }
         public double[]? D { get; set; }
 
-        public Letter(double[] doubleArray, char letter) 
+        public Letter(double[] doubleArray, char letter)
         {
             this.letter = letter;
-            this.X = doubleArray;
+            X = doubleArray;
 
             D = new double[26];
             for (int i = 0; i < D.Length; i++)
             {
-                D[i] = (Char.ToUpper(letter) - 65 == i) ? 1 : 0;
+                D[i] = char.ToUpper(letter) - 65 == i ? 1 : 0;
             }
         }
 

@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MultiLevelNeurons;
+using MultiLevelNeurons.Data;
 using MultiLevelNeuronsApi.Services;
+using System.Data;
 
 namespace MultiLevelNeuronsApi.Controllers
 {
